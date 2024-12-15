@@ -215,7 +215,7 @@ class danhSachThongKe {
 public:
     void docDuLieu(const str &fileKH, const str &fileCG) {
         ifstream file1(fileKH), file2(fileCG);
-        if (!file1 || !file2) {
+        if (!file1.is_open() || !file2.is_open()) {
             cerr << "khong the mo tep" << endl;
             return;
         }
